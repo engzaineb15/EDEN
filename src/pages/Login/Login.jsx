@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleForgotPassword = (e) => {
+    e.preventDefault();
+    navigate('/forget-password');
+  };
+
   return (
     <div className="container">
       <div className="form-section">
@@ -10,6 +17,7 @@ const Login = () => {
           <h1>Welcome back!</h1>
           <p>Enter your Credentials to access your account</p>
         </div>
+
         <form id="form">
           <div className="form-field">
             <input type="email" id="email" placeholder="Enter your E-mail" />
@@ -21,22 +29,28 @@ const Login = () => {
             <label htmlFor="password">Password</label>
           </div>
 
-          <div className="terms-link">
-            <label className="terms-label">
-              <input type="checkbox" id="remember" />
-              <span>Remember me</span>
+          <div className="form-options">
+            <label className="checkbox-label">
+              <input type="checkbox" id="remember-me" />
+              Remember me
             </label>
-            <a href="/forget-password" className="forgot-password">Forgot Password?</a>
+            <span className="forgot-password" onClick={handleForgotPassword}>
+              Forget Password?
+            </span>
           </div>
 
-          <button type="submit">Login</button>
-          <hr />
+          <button type="submit" className="login-button">Login</button>
+
           <p className="signup-link">
             Don't have an account? <Link to="/signup">Sign up</Link>
           </p>
         </form>
       </div>
-      <div className="image-section" />
+      <div className="image-section-login">
+        <img src={require('../../assets/images/background.jpg')} alt="Background" className="background-image-login" />
+        <div className="image-overlay"></div>
+
+      </div>
     </div>
   );
 };

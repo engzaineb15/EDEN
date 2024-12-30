@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c2c54;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: none;
+}
+
+.iconsDash i {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+}
+
+.contentDash {
+  display: flex;
+  flex: 1;
+  margin-left: 200px;  /* المسافة التي تجعل المحتوى يبتعد عن الـ Sidebar */
+  padding: 20px; /* إضافي لتحديد المسافة الداخلية للمحتوى */
+}
+
+.sidebarDash {
+  width: 200px;
+  background-color: #2c2cb5;
+  padding: 20px;
+  align-items: flex-start;
+  position: fixed; /* وضع الـ Sidebar بشكل ثابت */
+  height: 100vh; /* جعله يغطي كامل الصفحة */
+  top: 0;
+  left: 0;
+}
+
+.sidebarDash ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebarDash ul li {
+  margin-bottom: 15px;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+}
+
+.sidebarDash li {
+  background: none;
+  color: aqua;
+}
+
+.menuDash {
+  display: flex;
+  flex-direction: column;  /* للتأكد من ظهور العناصر عموديًا */
+  background: none;
+  align-self: flex-start;
+  margin-left: -300px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: #333;
+  margin-left: 20px; /* لإعطاء مساحة للمحتوى */
+}
+
+.charts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* يسمح بتوزيع العناصر على أكثر من سطر إذا كان هناك ضغط */
+}
+
+.bar-chart {
+  background-color: #2c2c54;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  margin-bottom: 20px; /* لإضافة مسافة بين البطاقات */
+}
+
+.bar-chart h2 {
+  margin: 0 0 10px;
+  color: #2c2c54;
+}
+
+.pie-chart {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  margin-bottom: 20px; /* لإضافة مسافة بين البطاقات */
+}
+
+.pie-chart h2 {
+  margin: 0 0 10px;
+  color: #2c2c54;
+}
+
+.info-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* يسمح بالعرض التلقائي إذا كانت الشاشة صغيرة */
+}
+
+.card {
+  background-color: #2c2c54;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #2c2c54;
+}
+
+.card2 {
+  background-color: #2c2c54;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.card2 h3 {
+  margin: 0 0 10px;
+  color: #2c2c54;
+}

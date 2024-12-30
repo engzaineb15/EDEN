@@ -12,12 +12,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container">
-      <div className="form-section">
-        <div className="welcome-text">
+    <div className="container-singup">
+      <div className="form-section-singup">
+        <div className="welcome-text-singup">
           <h1>Get Started Now!</h1>
         </div>
-        <div className="tabs">
+        <div className="tabs-singup">
           <div
             className={`tab ${activeTab === 'individual' ? 'active' : ''}`}
             onClick={() => handleSwitchForm('individual')}
@@ -32,29 +32,29 @@ const SignUp = () => {
           </div>
         </div>
         <form id="form">
-          <div className="form-field">
+          <div className="form-field-singup">
             <input type="text" id="name" placeholder="Type your name here" />
             <label htmlFor="name">Name</label>
           </div>
-          <div className="form-field">
+          <div className="form-field-singup">
             <input type="email" id="email" placeholder="Enter your E-mail" />
             <label htmlFor="email">E-mail</label>
           </div>
-          <div className="form-field">
+          <div className="form-field-singup">
             <input type="text" id="phone" placeholder="Enter your phone number" />
             <label htmlFor="phone">Phone</label>
           </div>
           {companyField && (
-            <div className="form-field">
+            <div className="form-field-singup">
               <input type="text" id="company" placeholder="Enter company name" />
               <label htmlFor="company">Company</label>
             </div>
           )}
-          <div className="form-field">
+          <div className="form-field-singup">
             <input type="password" id="password" placeholder="Enter your password" />
             <label htmlFor="password">Password</label>
           </div>
-          <div className="terms-link">
+          <div className="terms-link-singup">
             <label className="terms-label">
               <input type="checkbox" id="terms" />
               <span>
@@ -62,19 +62,33 @@ const SignUp = () => {
               </span>
             </label>
           </div>
-          <button type="submit">Sign Up</button>
-          <hr />
-          <p className="login-link">
-            Already have an account? <Link to="/">Login</Link>
+
+
+          <button type="submit" className="SignUp-button">Sign Up</button>
+
+
+          <p className="login-link-singup">
+            Already have an account? <Link to="/login">Login</Link>
           </p>
         </form>
       </div>
-      <div className="image-section"></div>
-      <div className="back-icon">
-        <a href="/">
-          <img src="../../assets/images/home.png" alt="Back" />
-        </a>
+      <div className="image-section-singup"></div>
+
+      <div className="image-section-singup">
+        <img src={require('../../assets/images/background.jpg')} alt="Background" className="background-image-login" />
+        <div className="image-overlay"></div>
+
       </div>
+
+
+      <div className="back-icon">
+    
+        <a href="/">
+          <img src={require("../../assets/images/home.png" )}alt="Back" />
+        </a>
+
+      </div>
+
     </div>
   );
 };

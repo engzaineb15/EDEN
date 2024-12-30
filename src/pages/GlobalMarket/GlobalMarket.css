@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    background-color: #F5F3D8;
+    color: #1D2A62; 
+    font-weight: bold;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color: #1D2A62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    height: 80px;
+}
+
+
+  .navbar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      
+  }
+
+  .navbar ul li {
+      height: 100%;
+      background: none;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+
+  }
+
+  .navbar ul li a {
+      gap: 10px;
+      color: #fff;
+      background: none;
+  }
+
+  .barbtns {
+  }
+
+  .nav-tabs {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #1D2A62;
+
+
+  }
+  /* Dropdown styles */
+  .navbar ul li .dropdown {
+    display: none; /* يخفي القائمة المنسدلة بشكل افتراضي */
+    position: absolute; /* يضعها بالنسبة إلى العنصر الرئيسي */
+    top: 100%; /* يبدأ من أسفل العنصر الرئيسي */
+    left: 0; /* ينطبق على الجانب الأيسر للعنصر */
+    background-color: #87AECE; /* اللون الخلفي */
+    border-radius: 5px; /* الحواف */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* الظل */
+    width: 200px;
+    z-index: 2;
+    padding: 10px 0; /* مساحة داخلية */
+
+    color: #1D2A62; /* لون النص الأساسي */
+    text-decoration: none; /* إزالة التسطير */
+    /* padding: 10px 20px; إضافة مسافة داخلية */
+}
+.navbar ul li .dropdown a:hover {
+    background-color: #1D2A62; /* لون الخلفية عند الإشارة */
+    color: #fff; /* لون النص عند الإشارة */
+    border-radius: 5px; /* جعل الحواف مستديرة عند الإشارة */
+}
+
+  .navbar ul li:hover .dropdown {
+      display: block;
+  }
+
+  /* Login button */
+  .login-btn {
+      background-color: #fff;
+      color: #1D2A62;
+      padding: 8px 15px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+  }
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.containerSide {
+    display: flex;
+    /* height: 100vh; */
+}
+
+.sidebarGlobal {
+    background-color: #87AECE;
+    width: 6%;
+    display: flex;
+    flex-direction: column;  
+    /* justify-content: center;  */
+    height: 180vh;
+    align-items: flex-start;
+}
+
+.sidebarGlobal img {
+    
+
+    margin: 10px 0; 
+    background-color: #F5F3D8; 
+    border-radius: 0px 10px 10px 0;
+    padding: 10px; 
+    
+}
+
+.sidebarGlobal a:nth-child(2) img {
+    background-color: #1D2A62;
+    
+}
+
+.sidebarGlobal a {
+    background: none;
+
+}
+
+.contentGlobal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #1D2A62;
+    text-align: left;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+    width: 750px;
+}
+
+ul li {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #1D2A62;
+}
+
+.listGlobal {
+    list-style-type: disc;
+    padding-left: 20px;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+    color: #1D2A62;
+    margin-left: 10px;
+    /* background-color: #F5F3D8; */
+}
+
+.listGlobal li {
+    font-size: 1.2em;
+    line-height: 1.8; /* لزيادة المسافة بين الأسطر */
+    /* margin-bottom: 10px; */
+    text-align: left;
+    /* background-color: #F5F3D8; */
+}
+.icons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* position: absolute; */
+    /* right: 20px; */
+    /* top: 50%; */
+    transform: translateY(-50%);
+}
+
+.icons img {
+    width: 500px;
+    height: 500px;
+    /* margin-bottom: 40px; */
+}
+
+.allcontantglobal {
+    /* background-color: #60a5fa; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-88 {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100vh;
+    background-color: #F5F3D8;
+    background: none;
+
+}
+
+.container-88 img{
+    background: none;
+    width: 70px;
+    height: 70px;
+
+    /* margin-bottom: 15px; */
+
+}

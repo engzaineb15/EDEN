@@ -1,183 +1,213 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-}
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
-
 .container {
     display: flex;
-    /* width: 100vw; */
-    height: 100vh;
-    background: #fff;
+    width: 100%;
+    /* height: 100vh;/ */
+    background-color: #fff;
+    /* overflow: hidden; */
+    flex-direction: row;
 }
 
 .form-section {
-    width: 50%;
-  height: 100%;
+    /* width: 70%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 60px;
+    /* background-color: aqua; */
 }
-
 .welcome-text {
-    margin-bottom: 2.5rem;
+    text-align: left;
+    margin-bottom: 30px;
+    width: 100%;
+    
 }
 
 .welcome-text h1 {
     font-size: 2.5rem;
     color: #1D2A62;
-    margin-bottom: 1rem;
+    margin-bottom: 0px;
+    text-align: left;
+
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    color: #1D2A62;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+#form {
+    width: 100%;
+    max-width: 500px;
+    align-self: flex-start;
+    /* align-items: flex-start; */
 }
 
 .form-field {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
     width: 100%;
+    /* align-self: start; */
+    /* align-items: self-start; */
 }
 
 .form-field input {
     width: 100%;
-    padding: 1rem;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    /* background-color: aqua; */
+    
 }
-
+/* 
 .form-field input:focus {
     border-color: #1D2A62;
     box-shadow: 0 0 0 2px rgba(5, 109, 127, 0.1);
-}
+} */
 
 .form-field label {
     position: absolute;
-    left: 1rem;
-    top: -0.5rem;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     background: white;
-    padding: 0 0.5rem;
-    font-size: 0.9rem;
+    padding: 0 5px;
+    font-size: 14px;
     color: #666;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
 }
 
-.terms-link {
+.form-field input:focus + label {
+    top: -10px;
+    opacity: 1;
+    font-size: 12px;
+    color: #1D2A62;
+}
+
+.form-field input:focus::placeholder {
+    opacity: 0;
+}
+
+
+.form-options {
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.forgot-password {
+    white-space: nowrap;
+    color: #1D2A62;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    align-self: flex-start; /* يجعل الزر بمحاذاة البداية */
+    padding: 12px 20px;
+    background: #1D2A62;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px; /* مسافة من العناصر أعلاه */
+    
+}
+
+.login-button:hover {
+    background: #153A91;
 }
 
 button[type="submit"] {
-      width: 100%;
-      padding: 1rem;
-      background: #1D2A62;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-}
-
-button[type="submit"]:hover {
-      background: #1D2A62;
-}
-
-.container {
-    display: flex;
+    margin-top: 20px;
     width: 100%;
-    height: 100%;
+    margin-right: 105px;
 }
 
-.form-section {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 80px;
-}
 
-#form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.welcome-text {
-    margin-top: 80px;
-}
-
-.image-section {
-    flex: 1;
-    min-width: 50%;
-    height: 100vh;
-    background-image: url('../../assets/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
 
 .signup-link {
-    text-align: center;
-    margin-top: 1.5rem;
+    text-align:left;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+
 }
 
 .signup-link a {
     color: #1D2A62;
-    text-decoration: none;
-    font-weight: 500;
+    /* text-decoration: none; */
+    font-weight: 600;
+    
 }
 
-@media (max-width: 1024px) {
-    .form-section {
-        padding: 3rem;
-    }
+.image-section-login {
+    width: 65%;
+    height: 100vh; /* تغطي كامل الارتفاع */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* للسماح بوضع الطبقة فوق الصورة */
+    margin: -20px; /* إزالة أي مسافات خارجية */
+    margin-left: -10px;
+    padding: 0; /* إزالة أي حواف داخلية */
+    border-radius: 20px 0 0 20px; /* إزالة أي حواف مستديرة */
+    overflow: hidden; 
+    
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .form-section {
-        max-width: 100%;
-        padding: 2rem;
-    }
-    
-    .image-section {
-        display: none;
-    }
-    
-    .welcome-text h1 {
-        font-size: 2rem;
-    }
+.image-section-login img {
+    width: 100%; /* يجعل الصورة تأخذ كامل العرض */
+    height: 100%; /* يجعل الصورة تأخذ كامل الارتفاع */
+    object-fit: cover; /* يجعل الصورة تغطي العنصر بالكامل */
+    margin: 0; /* إزالة المسافات */
+    padding: 0; /* إزالة الحواف الداخلية */
+    border-radius: 0; /* إزالة الحواف المستديرة إذا كانت موجودة */
 }
 
-@media (max-width: 480px) {
-    .form-section {
-        padding: 1.5rem;
-    }
-    
-    .welcome-text h1 {
-        font-size: 1.8rem;
-    }
-    
-    .form-field {
-        margin-bottom: 1rem;
-    }
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* تأثير ظل بسيط */
+    z-index: 1; /* وضع الطبقة فوق الصورة */
 }
+
+/* تحسين الاستجابة للشاشات الصغيرة */
